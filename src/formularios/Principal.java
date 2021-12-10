@@ -35,13 +35,16 @@ public class Principal extends javax.swing.JFrame {
         btnbuscar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         btnhistoriagine = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         jLabel1.setText("Consultorio Dra. Ana María Ortiz Hernández ");
 
-        btnhistoria.setText("Historia clínica");
+        btnhistoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/medical-22_icon-icons.com_73922.png"))); // NOI18N
         btnhistoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnhistoriaActionPerformed(evt);
@@ -62,7 +65,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btnhistoriapediatrica.setText("Historia clínica pediátrica");
+        btnhistoriapediatrica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/medical-22_icon-icons.com_73922.png"))); // NOI18N
         btnhistoriapediatrica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnhistoriapediatricaActionPerformed(evt);
@@ -80,12 +83,18 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel2.setText("Buscar un historial");
 
-        btnhistoriagine.setText("Historia clínica ginecológica");
+        btnhistoriagine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/medical-22_icon-icons.com_73922.png"))); // NOI18N
         btnhistoriagine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnhistoriagineActionPerformed(evt);
             }
         });
+
+        jLabel3.setText("Historia Clínica");
+
+        jLabel4.setText("Historia Clínica Ginecológica");
+
+        jLabel5.setText("Historia Clínica Pediátrica");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,50 +105,64 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btncerrarsesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnsalir)
-                .addGap(22, 22, 22))
+                .addGap(95, 95, 95))
             .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(btnbuscar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(266, 266, 266)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(258, 258, 258)
-                        .addComponent(btnhistoria))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(232, 232, 232)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnhistoriagine)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(btnhistoriapediatrica)))))
-                .addContainerGap(85, Short.MAX_VALUE))
+                                .addComponent(btnhistoria)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnhistoriapediatrica)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnhistoriagine)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4)))
+                        .addGap(157, 157, 157)
+                        .addComponent(btnbuscar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(107, 107, 107)
-                .addComponent(btnhistoria)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnhistoriagine)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnhistoriapediatrica)
-                .addGap(22, 22, 22)
-                .addComponent(btnbuscar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnhistoria)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnhistoriagine)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnhistoriapediatrica))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(20, 20, 20)
+                                        .addComponent(jLabel3))
+                                    .addComponent(btnbuscar))
+                                .addGap(55, 55, 55)
+                                .addComponent(jLabel4)
+                                .addGap(65, 65, 65)
+                                .addComponent(jLabel5))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnsalir)
                     .addComponent(btncerrarsesion))
-                .addContainerGap())
+                .addGap(48, 48, 48))
         );
 
         pack();
@@ -223,5 +246,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnsalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
